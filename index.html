@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Языки программирования</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<nav class="header" id = "header">
+			<a href="index.html"><img src="images/home.png" class = "home_icon" alt="Главная" /></a>
+			<ul>
+				<li><a class="header_link" href="java.html">Java</a></li>
+				<li><a class="header_link" href="c.html">C</a></li>
+				<li><a class="header_link" href="pascalabc.html">PascalABC</a></li>
+				<li><a class="header_link" href="fs.html">F#</a></li>
+			</ul>
+
+			<div class="header_submenu" id="java_submenu">
+				<ul>
+					<li><a class="header_submenu_link" href="java.html#key_elements">Ключевые элементы</a></li>
+					<li><a class="header_submenu_link" href="java.html#syntax">Элементы синтаксиса</a></li>
+					<li><a class="header_submenu_link" href="java.html#example">Пример кода</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="c_submenu">
+				<ul>
+					<li><a href="c.html#key_features" class="header_submenu_link">Важные особенности</a></li>
+					<li><a href="c.html#syntax" class="header_submenu_link">Описание синтаксиса</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="pascalabc_submenu">
+				<ul>
+					<li><a href="pascalabc.html#features" class="header_submenu_link">Особенности языка</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="fs_submenu">
+				<ul>
+					<li><a href="fs.html#features" class="header_submenu_link">Особенности</a></li>
+					<li><a href="fs.html#compile" class="header_submenu_link">Компилятор и интерпретатор</a></li>
+					<li><a href="fs.html#examples" class="header_submenu_link">Примеры</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="wrapper">
+			<div class="wrapper_text_container">
+<h1>Языки программирования</h1>
+
+
+<p>Язык программирования — формальная знаковая система, предназначенная для записи компьютерных программ. Язык программирования определяет набор лексических, синтаксических и семантических правил, задающих внешний вид программы и действия, которые выполнит исполнитель (компьютер) под ее управлением.</p>
+
+<p>Со времени создания первых программируемых машин человечество придумало уже более восьми с половиной тысяч языков</p>
+
+<p>программирования. Каждый год их число пополняется новыми. Некоторыми языками умеет пользоваться только небольшое число их собственных разработчиков, другие становятся известны миллионам людей. Профессиональные программисты иногда применяют в своей работе более десятка разнообразных языков программирования.</p>
+
+<p>Создатели языков по-разному толкуют понятие язык программирования. К наиболее распространённым утверждениям, признаваемым большинством разработчиков, относятся следующие:</p>
+
+<p>Функция: язык программирования предназначен для написания компьютерных программ, которые применяются для передачи компьютеру инструкций по выполнению того или иного вычислительного процесса и организации управления отдельными устройствами.</p>
+
+<p>Задача: язык программирования отличается от естественных языков тем, что предназначен для передачи команд и данных от человека к компьютеру, в то время, как естественные языки используются для общения людей между собой. В принципе, можно обобщить определение «языков программирования» — это способ передачи команд, приказов, чёткого руководства к действию; тогда как человеческие языки служат также для обмена информацией.</p>
+
+<p>Исполнение: язык программирования может использовать специальные конструкции для определения и манипулирования структурами данных и управления процессом вычислений.</p>
+<img class='img_center' alt='rankings' src='images/ЯПrankings.png'>
+			</div>
+		</div>
+		<footer>Design studio 2017 ©</footer>
+		<script type="text/javascript">
+			var links = document.getElementsByClassName("header_link");
+			var i;
+			for (i = 0; i < links.length; i++)
+			{
+				links[i].i = i;
+				links[i].onmouseenter = function(event)
+				{
+					var j = 0;
+					for (j = 0; j < links.length; j++)
+					{
+						links[j].style.color = "#eee";
+					}
+					this.style.color = "#55aa55";
+
+					var submenus = document.getElementsByClassName("header_submenu");
+					var k;
+					for (k = 0; k < submenus.length; k++)
+					{
+						submenus[k].style.display = "none";
+					}
+
+					switch (this.i)
+					{
+						case 0:
+							document.getElementById("java_submenu").style.display = "block";
+							break;
+						case 1:
+							document.getElementById("c_submenu").style.display = "block";
+							break;
+						case 2:
+							document.getElementById("pascalabc_submenu").style.display = "block";
+							break;
+						case 3:
+							document.getElementById("fs_submenu").style.display = "block";
+							break;
+					}
+				};
+			}
+
+			document.getElementById("header").onmouseleave = function(event)
+			{
+				var submenus = document.getElementsByClassName("header_submenu");
+				var k;
+				for (k = 0; k < submenus.length; k++)
+				{
+					submenus[k].style.display = "none";
+				}
+				var links = document.getElementsByClassName("header_link");
+				var j = 0;
+				for (j = 0; j < links.length; j++)
+				{
+					links[j].style.color = "#eee";
+				}
+			};
+		</script>
+	</body>
+</html>

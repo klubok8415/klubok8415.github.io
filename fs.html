@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Языки программирования: F#</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<nav class="header" id = "header">
+			<a href="index.html"><img src="images/home.png" class = "home_icon" alt="Главная" /></a>
+			<ul>
+				<li><a class="header_link" href="java.html">Java</a></li>
+				<li><a class="header_link" href="c.html">C</a></li>
+				<li><a class="header_link" href="pascalabc.html">PascalABC</a></li>
+				<li><a class="header_link" href="fs.html">F#</a></li>
+			</ul>
+
+			<div class="header_submenu" id="java_submenu">
+				<ul>
+					<li><a class="header_submenu_link" href="java.html#key_elements">Ключевые элементы</a></li>
+					<li><a class="header_submenu_link" href="java.html#syntax">Элементы синтаксиса</a></li>
+					<li><a class="header_submenu_link" href="java.html#example">Пример кода</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="c_submenu">
+				<ul>
+					<li><a href="c.html#key_features" class="header_submenu_link">Важные особенности</a></li>
+					<li><a href="c.html#syntax" class="header_submenu_link">Описание синтаксиса</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="pascalabc_submenu">
+				<ul>
+					<li><a href="pascalabc.html#features" class="header_submenu_link">Особенности языка</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="fs_submenu">
+				<ul>
+					<li><a href="fs.html#features" class="header_submenu_link">Особенности</a></li>
+					<li><a href="fs.html#compile" class="header_submenu_link">Компилятор и интерпретатор</a></li>
+					<li><a href="fs.html#examples" class="header_submenu_link">Примеры</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="wrapper">
+			<div class="wrapper_text_container">
+<h1>F#</h1> 
+
+
+
+<img class='img_left' src='images/fsharp.png' alt='fsharplogo'>
+<p>F# — это мультипарадигмальный язык программирования из семейства языков .NET Framework, поддерживающий функциональное программирование в дополнение к императивному</p>
+<p>(процедурному) и объектно-ориентированному программированию. Язык был разработан Доном Саймом (англ. Don Syme) в Microsoft Research в Кембридже, в настоящее время</p>
+<a name="features"></a>
+<a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B9%D0%BC,_%D0%94%D0%BE%D0%BD"><img class='img_right' src='images/DonSaimon.jpg' alt='Don Saimon'></a><p>его разработку ведёт Microsoft Developer Division. F# достаточно тесно интегрируется со средой разработки Visual Studio и включён в поставку Visual Studio 2010/2012/2013/2015; разработаны также компиляторы для Mac и Linux.</p>
+<h2>Особенности</h2>
+	<p>Код на языке F# является безопасным в отношении типов, часто бывает более компактным, чем аналогичный код C#, за счёт вывода типов. В F# действует строгая типизация,</p>
+	<p>неявные преобразования типов полностью отсутствуют, что полностью исключает ошибки, связанные с приведением типов.</p>
+	<p>Такие возможности, как обобщённое программирование и функции высших порядков позволяют писать абстрактные обобщённые алгоритмы,</p>
+	<p>которые управляют параметризованными структурами данных (например, массивами, списками, графами, деревьями).</p>
+	<p>В F# по умолчанию все значения являются константами. F# допускает переменные, для чего требуется специально помечать значения как изменяемые при помощи слова mutable:</p>
+	<h3>Пример</h3>
+		<pre class="code">
+let x = 2 // неизменяемое значение
+let mutable y = 2 // переменная
+x <- 3 // ошибка
+y <- 3 // Ok. y = 3</pre>
+<a name="compile"></a>
+
+	<p>Большая часть кода является чистыми функциями, что позволяет избежать многих ошибок и упростить отладку. Кроме того, упрощается распараллеливание программ.</p>
+	<p>При всем этом код редко становится сложнее, чем аналогичный код на императивном языке.</p>
+
+<h2>Компилятор и интерпретатор</h2>	
+<a name="examples"></a>
+<p>F# — компилируемый язык программирования, при этом в качестве промежуточного языка используется язык Common Intermediate Language (CIL), так же как и в программах, написанных на языках C# или VB.NET.</p>
+<p>Наряду с F#-компилятором (fsc) присутствует и F#-интерпретатор (fsi), который исполняет F#-код интерактивно.</p>
+<h2>Примеры</h2>
+<p>Синтаксис F# построен на математической нотации, а программирование чем-то похоже на алгебру, что делает F# похожим на Haskell.</p>
+<p>Например, когда вы определяете новый тип, то можете указать, что переменными этого типа будут «целые или строки». Вот как это выглядит:</p>
+<h3>Пример</h3>
+<pre class="code">type myType = IntVal of int | StringVal of string</pre>
+<p>Код также представляет собой математическую нотацию. Следующая конструкция эквивалентна f(x) = x + 1 в алгебре:</p>
+<h3>Пример</h3>
+<pre class="code">let f x = x + 1</pre>
+<p>F# работает следующим образом: тип «f» представляет собой «int -> int», то есть функция получает на вход целое и выдаёт на выход целое.</p>
+<p>F# позволяет получить доступ абсолютно ко всему, что есть в FCL. Синтаксис для работы с библиотеками .NET в этом смысле максимально близок к синтаксису C#.</p>
+<p>Особенности языка заметны при использовании всего спектра возможностей F#. К примеру, следующий код применяет функцию к элементам списка:</p>
+<h3>Пример</h3>
+<pre class="code">
+	let rec map func lst =
+	     			match lst with
+	        | [] -> []
+	        | head :: tail -> func head :: map func tail
+
+		let myList = [1;3;5]
+		let newList = map (fun x -> x + 1) myList</pre>
+			</div>
+		</div>
+		<footer>Design studio 2017 ©</footer>
+		<script type="text/javascript">
+			var links = document.getElementsByClassName("header_link");
+			var i;
+			for (i = 0; i < links.length; i++)
+			{
+				links[i].i = i;
+				links[i].onmouseenter = function(event)
+				{
+					var j = 0;
+					for (j = 0; j < links.length; j++)
+					{
+						links[j].style.color = "#eee";
+					}
+					this.style.color = "#55aa55";
+
+					var submenus = document.getElementsByClassName("header_submenu");
+					var k;
+					for (k = 0; k < submenus.length; k++)
+					{
+						submenus[k].style.display = "none";
+					}
+
+					switch (this.i)
+					{
+						case 0:
+							document.getElementById("java_submenu").style.display = "block";
+							break;
+						case 1:
+							document.getElementById("c_submenu").style.display = "block";
+							break;
+						case 2:
+							document.getElementById("pascalabc_submenu").style.display = "block";
+							break;
+						case 3:
+							document.getElementById("fs_submenu").style.display = "block";
+							break;
+					}
+				};
+			}
+
+			document.getElementById("header").onmouseleave = function(event)
+			{
+				var submenus = document.getElementsByClassName("header_submenu");
+				var k;
+				for (k = 0; k < submenus.length; k++)
+				{
+					submenus[k].style.display = "none";
+				}
+				var links = document.getElementsByClassName("header_link");
+				var j = 0;
+				for (j = 0; j < links.length; j++)
+				{
+					links[j].style.color = "#eee";
+				}
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+	background-color: #ddd;
+	margin: 0;
+}
+
+/* header */
+
+.header {
+	position: fixed;
+	top: 0px;
+	background-color: #111;
+	color: #eee;
+	width: 100%;
+	font-family: Georgia, "Times New Roman";
+	font-size: 16pt;
+	text-align: center;
+}
+
+.header ul {
+	margin: 0;
+	padding: 20px;
+}
+
+.header li {
+	margin: 0;
+	list-style-type: none;
+	margin: 0 25px;
+	display: inline;
+}
+
+.home_icon {
+	width: 48px;
+	margin: -10px;
+	position: absolute;
+	top: 17px;
+	left: 25px;
+}
+
+.header_link:active, .header_link:visited, .header_link:link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.header_submenu {
+	font-size: 14pt;
+	background-color: #203020;
+	display: none;
+}
+
+.header_submenu ul {
+	margin: 0;
+	padding: 20px;
+}
+
+.header_submenu li {
+	margin: 0;
+	list-style-type: none;
+	margin: 0 25px;
+	display: inline;
+}
+
+.header_submenu_link:active, 
+.header_submenu_link:visited, 
+.header_submenu_link:link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.header_submenu_link:hover {
+	color: #55aa55;
+}
+
+
+
+
+
+/* WRAPPER */
+
+.wrapper {
+	width: 800px;
+	max-width: 90%;
+	padding: 50px;
+	background-color: #eee;
+	margin: 85px auto 0px auto;
+}
+
+.wrapper_text_container {
+	font-size: 15pt;
+	font-family: Georgia, "Times New Roman";
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.wrapper_text_container h1 {
+	font-size: 26pt;
+	margin-left: 20px;
+	text-align: left;
+}
+
+.wrapper_text_container h2 {
+	font-size: 22pt;
+	margin-left: 10px;
+	text-align: left;
+}
+
+.wrapper_text_container h3 {
+	font-size: 18pt;
+	text-align: left;
+}
+
+.wrapper_text_container li {
+	margin: 12px 0;
+}
+
+.code {
+	background-color: #ccc;
+	font-family: Consolas, Monospace, "Courier New";
+	padding: 15px;
+	font-size: 12pt;
+}
+
+.wrapper_text_container td {
+	border: 1px solid;
+	padding: 10px;
+}
+
+.wrapper_text_container table {
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+.img_right, .img_left {
+	width: 220px;
+	margin: 25px;
+}
+
+.img_right {
+	float: right;
+}
+
+.img_left {
+	float: left;
+}
+
+.img_center {
+	display: block;
+	margin: 25px auto;
+}
+
+footer {
+	margin-top: 40px;
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+	font-size: 14pt;
+	font-family: Georgia, "Times New Roman";
+	text-align: center;
+	color: #666;
+}

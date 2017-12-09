@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Языки программирования: PascalABC</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<nav class="header" id = "header">
+			<a href="index.html"><img src="images/home.png" class = "home_icon" alt="Главная" /></a>
+			<ul>
+				<li><a class="header_link" href="java.html">Java</a></li>
+				<li><a class="header_link" href="c.html">C</a></li>
+				<li><a class="header_link" href="pascalabc.html">PascalABC</a></li>
+				<li><a class="header_link" href="fs.html">F#</a></li>
+			</ul>
+
+			<div class="header_submenu" id="java_submenu">
+				<ul>
+					<li><a class="header_submenu_link" href="java.html#key_elements">Ключевые элементы</a></li>
+					<li><a class="header_submenu_link" href="java.html#syntax">Элементы синтаксиса</a></li>
+					<li><a class="header_submenu_link" href="java.html#example">Пример кода</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="c_submenu">
+				<ul>
+					<li><a href="c.html#key_features" class="header_submenu_link">Важные особенности</a></li>
+					<li><a href="c.html#syntax" class="header_submenu_link">Описание синтаксиса</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="pascalabc_submenu">
+				<ul>
+					<li><a href="pascalabc.html#features" class="header_submenu_link">Особенности языка</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="fs_submenu">
+				<ul>
+					<li><a href="fs.html#features" class="header_submenu_link">Особенности</a></li>
+					<li><a href="fs.html#compile" class="header_submenu_link">Компилятор и интерпретатор</a></li>
+					<li><a href="fs.html#examples" class="header_submenu_link">Примеры</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="wrapper">
+			<div class="wrapper_text_container">
+<h1>PascalABC.NET</h1>
+
+
+<img class='img_left' src='images/PascalABC.jpg'>
+
+<p>PascalABC.NET — это язык программирования Паскаль нового поколения, включающий классический Паскаль, большинство возможностей языка Delphi, а также ряд собственных расширений.</p>
+<img class='img_right' src='images/Delphi.jpg'>
+<p>Он реализован на платформе Microsoft.NET и содержит все современные языковые средства: классы, перегрузку операций, интерфейсы, обработку исключений, обобщенные классы и подпрограммы, сборку мусора, лямбда-</p>
+<p>выражения, средства параллельного программирования.</p>
+<img class='img_left' src='images/microsoft_.net_.png'>
+<p>PascalABC.NET является мультипарадигменным языком: на нём можно программировать в структурном, объектно-ориентированном и функциональном стилях.</p>
+<a name="features"></a>
+<p>PascalABC.NET — это также простая и мощная интегрированная среда разработки, поддерживающая технологию IntelliSense, содержащая средства автоформатирования, встроенный отладчик и встроенный дизайнер форм. Кроме того, консольный компилятор PascalABC.NET функционирует на Linux и MacOS под Mono.</p>
+<h2>Особенности языка</h2>
+	<h3>Расширения языка Паскаль</h3>
+<ul><li>Операторы <pre class="code">+= -= *= /=</pre></li>
+<li>Внутриблочные описания переменных</li>
+<li>Описание переменных в заголовке цикла <pre class="code">for</pre></li>
+<li>Инициализация переменной при описании <pre class="code">(var n: integer := 10;)</pre></li>
+<li>Автоопределение типа переменной при инициализации <pre class="code">(var x := 1;)</pre></li>
+<li>Цикл foreach</li>
+<li>Подпрограммы с переменным числом параметров</li>
+<li>Множества set на базе произвольных типов <pre class="code">(set of integer)</pre></li>
+<li>case по строкам</li>
+<li>Методы в записях</li>
+<li>Возможность определять методы как внутри, так и вне интерфейса класса или записи</li>
+<li>Наряду со стандартным, упрощённый синтаксис модулей</li>
+<li>Операция new для вызова конструктора</li>
+<li>Инициализаторы полей классов и записей</li>
+<li>Перегрузка операций[2]</li>
+<li>Автоклассы</li>
+<li>Безымянные классы</li>
+<li>Лямбда-функции</li>
+<li>Тип функции в стиле <pre class="code">T->T</pre></li>
+<li>Тип кортежа в стиле <pre class="code">(T1,T2)</pre></li>
+<li>Тип последовательности <pre class="code">sequence of T</pre></li>
+<li>Кортежное присваивание <pre class="code">(a,b) := (b,a)</pre></li>
+<li>Срезы вида <pre class="code">a[from:to:step]</pre> для массивов, списков и строк</li>
+<li>Операторы <pre class="code">yield</pre> и <pre class="code">yield sequence</pre> для генерации последовательностей</li>
+<li>Поддержка директив OpenMP</li></ul>
+
+	<h3>Особенности языка, связанные с платформой .NET</h3>
+	<ul>
+		<li>Все типы — классы</li>
+		<li>Стандартный тип BigInteger</li>
+		<li>Стандартный тип Complex</li>
+		<li>Двумерные динамические массивы</li>
+		<li>Интерфейсы .NET</li>
+		<li>Подключение пространств имен .NET в разделе uses</li>
+		<li>Обобщённые классы, интерфейсы, подпрограммы и процедурные переменные</li>
+		<li>Автоматическая сборка мусора для объектов</li>
+		<li>Атрибуты</li>
+		<li>Методы расширения</li>
+		<li>Поддержка неуправляемого кода через external</li>
+	</ul>
+	<h3>Стандартные модули</h3>
+	<p>Поскольку в PascalABC.NET можно пользоваться всеми библиотеками платформы .NET, то стандартные модули немногочисленны и ориентированы на обучение:</p>
+		<ul>
+		<li>Устаревший модуль растровой графики GraphABC</li>
+		<li>Модуль растровой графики GraphWPF</li>
+		<li>Модуль векторной графики ABCObjects</li>
+		<li>Модуль 3D графики Graph3D</li>
+		<li>Модули исполнителей Робот и Чертёжник (школьная информатика)</li>
+		</ul>
+
+
+
+			</div>
+		</div>
+		<footer>Design studio 2017 ©</footer>
+		<script type="text/javascript">
+			var links = document.getElementsByClassName("header_link");
+			var i;
+			for (i = 0; i < links.length; i++)
+			{
+				links[i].i = i;
+				links[i].onmouseenter = function(event)
+				{
+					var j = 0;
+					for (j = 0; j < links.length; j++)
+					{
+						links[j].style.color = "#eee";
+					}
+					this.style.color = "#55aa55";
+
+					var submenus = document.getElementsByClassName("header_submenu");
+					var k;
+					for (k = 0; k < submenus.length; k++)
+					{
+						submenus[k].style.display = "none";
+					}
+
+					switch (this.i)
+					{
+						case 0:
+							document.getElementById("java_submenu").style.display = "block";
+							break;
+						case 1:
+							document.getElementById("c_submenu").style.display = "block";
+							break;
+						case 2:
+							document.getElementById("pascalabc_submenu").style.display = "block";
+							break;
+						case 3:
+							document.getElementById("fs_submenu").style.display = "block";
+							break;
+					}
+				};
+			}
+
+			document.getElementById("header").onmouseleave = function(event)
+			{
+				var submenus = document.getElementsByClassName("header_submenu");
+				var k;
+				for (k = 0; k < submenus.length; k++)
+				{
+					submenus[k].style.display = "none";
+				}
+				var links = document.getElementsByClassName("header_link");
+				var j = 0;
+				for (j = 0; j < links.length; j++)
+				{
+					links[j].style.color = "#eee";
+				}
+			};
+		</script>
+	</body>
+</html>

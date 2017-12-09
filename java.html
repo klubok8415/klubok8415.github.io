@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Языки программирования: Java</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<nav class="header" id = "header">
+			<a href="index.html"><img src="images/home.png" class = "home_icon" alt="Главная" /></a>
+			<ul>
+				<li><a class="header_link" href="java.html">Java</a></li>
+				<li><a class="header_link" href="c.html">C</a></li>
+				<li><a class="header_link" href="pascalabc.html">PascalABC</a></li>
+				<li><a class="header_link" href="fs.html">F#</a></li>
+			</ul>
+
+			<div class="header_submenu" id="java_submenu">
+				<ul>
+					<li><a class="header_submenu_link" href="java.html#key_elements">Ключевые элементы</a></li>
+					<li><a class="header_submenu_link" href="java.html#syntax">Элементы синтаксиса</a></li>
+					<li><a class="header_submenu_link" href="java.html#example">Пример кода</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="c_submenu">
+				<ul>
+					<li><a href="c.html#key_features" class="header_submenu_link">Важные особенности</a></li>
+					<li><a href="c.html#syntax" class="header_submenu_link">Описание синтаксиса</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="pascalabc_submenu">
+				<ul>
+					<li><a href="pascalabc.html#features" class="header_submenu_link">Особенности языка</a></li>
+				</ul>
+			</div>
+			<div class="header_submenu" id="fs_submenu">
+				<ul>
+					<li><a href="fs.html#features" class="header_submenu_link">Особенности</a></li>
+					<li><a href="fs.html#compile" class="header_submenu_link">Компилятор и интерпретатор</a></li>
+					<li><a href="fs.html#examples" class="header_submenu_link">Примеры</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="wrapper">
+			<div class="wrapper_text_container">
+<h1>Java</h1>
+
+
+
+<img class='img_right' src='images/Java.png' alt='Java'>
+<img class='img_left' src='images/sun.png' alt='Sun'>
+<p>
+	Java — объектно-ориентированный язык программирования, разрабатываемый компанией Sun
+	Microsystems с 1991 года и официально выпущенный 23 мая 1995 года. Изначально новый язык 
+	программирования назывался Oak (James Gosling) и разрабатывался для бытовой электроники, но 
+	впоследствии был переименован в Java и стал использоваться для написания апплетов, приложений и 
+	серверного программного обеспечения.
+</p>
+<a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%81%D0%BB%D0%B8%D0%BD%D0%B3,_%D0%94%D0%B6%D0%B5%D0%B9%D0%BC%D1%81"><img class='img_left' src='images/james-gosling-.jpg' alt='James Gosling'></a><p>
+	Программы на Java могут быть транслированы в байт-код, выполняемый на виртуальной java-машине 
+	(JVM) — программе, обрабатывающей байт-код и передающей инструкции оборудованию, как 
+	интерпретатор, но с тем отличием, что байт-код, в отличие от текста, обрабатывается значительно быстрее.
+</p>	
+<a name="key_elements"></a>
+<p>
+	Язык Java зародился как часть проекта создания передового программного обеспечения для различных
+	бытовых приборов. Реализация проекта была начата на языке C++, но вскоре возник ряд проблем, 
+	наилучшим средством борьбы с которыми было изменение самого инструмента — языка 
+	программирования. Стало очевидным, что необходим платформо-независимый язык программирования, 
+	позволяющий создавать программы, которые не приходилось бы компилировать отдельно для каждой 
+	архитектуры и можно было бы использовать на различных процессорах под различными операционными 
+	системами.
+</p>
+
+<h2>Три ключевых элемента объединились в технологии языка Java</h2>	<ol>
+		<li>
+			Java предоставляет для широкого использования свои апплеты (applets) — небольшие, надежные, 
+			динамичные, не зависящие от платформы активные сетевые приложения, встраиваемые в 
+			страницы Web. Апплеты Java могут настраиваться и распространяться потребителям с такой же легкостью, как любые документы HTML
+		</li>
+	
+		<li>
+			Java высвобождает мощь объектно-ориентированной разработки приложений, сочетая простой и 
+			знакомый синтаксис с надежной и удобной в работе средой разработки. Это позволяет широкому кругу программистов 
+			быстро создавать новые программы и новые апплеты
+		</li>
+		
+		<li><a name="syntax"></a>
+		Java предоставляет программисту богатый набор классов объектов для ясного абстрагирования многих 
+		системных функций, используемых при работе с окнами, сетью и для ввода-вывода. Ключевая черта этих классов заключается 
+		в том, что они обеспечивают создание независимых от используемой платформы абстракций для широкого спектра системных интерфейсов
+		</li>	
+	</ol>
+
+<h2>Элементы синтаксиса:</h2><p>Таблица 1 Элементы синтаксиса</p>
+<table>
+	<tr>
+		<td>Комментарии до конца строки</td>
+		<td><pre class="code">//</pre></td>
+	</tr>
+	<tr>
+		<td>Комментарии, которые не могут быть вложенными</td>
+		<td><pre class="code">/*...*/</pre></td>
+	</tr>
+	<tr>
+		<td>Регистрозависимость</td>
+		<td>да</td>
+	</tr>
+	<tr>
+		<td>Регулярное выражение идентификатора переменной</td>
+		<td><pre class="code">[_a-zA-Z1][_a-zA-Z0-91]*</pre></td>
+	</tr>
+	<tr>
+		<td>Присваивание значения переменной</td>
+		<td><pre class="code">=</pre></td>
+	</tr>
+	<tr>
+		<td>Объявление переменной</td>
+		<td><pre class="code">type variable</pre></td>
+	</tr>
+	<tr>
+		<td>Объявление переменной c присваиванием значения</td>
+		<td><pre class="code">type variable = value</pre></td>
+	</tr>
+	<tr>
+		<td>Группировка выражений</td>
+		<td><pre class="code">(...)</pre></td>
+	</tr>
+	<tr>
+		<td>Блок</td>
+		<td><pre class="code">{...}</pre></td>
+	</tr>
+	<tr>
+		<td>Равенство</td>
+		<td><pre class="code">==</pre></td>
+	</tr>
+	<tr>
+		<td>Неравенство</td>
+		<td><pre class="code">!=</pre></td>
+	</tr>
+	<tr>
+		<td>Сравнение</td>
+		<td><pre class="code">&lt; &gt; &lt;= &gt;=</pre></td>
+	</tr>
+	<tr>
+		<td>Определение функций</td>
+		<td><pre class="code">public &lt;returntype&gt; funct(a,b,c){....}</pre></td>
+	</tr>
+	<tr>
+		<td>Вызов функции</td>
+		<td><pre class="code">f(a,b,...)</pre></td>
+	</tr>
+	<tr>
+		<td>Вызов функции без параметров</td>
+		<td><pre class="code">f()</pre></td>
+	</tr>
+	<tr>
+		<td>Последовательность</td>
+		<td><pre class="code">;</pre></td>
+	</tr>
+	<tr>
+		<td>Если - то</td>
+		<td><pre class='code'>if (condition) ...</pre></td>
+	</tr>
+	<tr>
+		<td>Если - то - иначе</td>
+		<td><pre class='code'>if (condition) ... else ... или condition ? ... : ...</pre></td>
+	</tr>
+	<tr>
+		<td>Бесконечный цикл</td>
+		<td><pre  class='code'>while (true) ...</pre></td>
+	</tr>
+	<tr>
+		<td>Цикл с предусловием</td>
+		<td><pre  class='code'>while (condition)...</pre></td>
+	</tr>
+	<tr>
+		<td>Цикл с постусловием</td>
+		<td><pre  class='code'>do ... while (condition)</pre></td>
+	</tr>
+	<tr>
+		<td>Цикл for -next для диапазона целых чисел с инкрементом на 1</td>
+		<td><pre  class='code'>for (int i = 1; i &lt;= 10, i++)...</pre></td>
+	</tr>
+	<tr>
+		<td>Цикл for -next для диапазона целых чисел с декрементом на 1</td>
+		<td><pre  class='code'>for (int i = 1; i &lt;= 10, i--)...</pre></td>
+	</tr>
+</table>
+<a name="example"></a>
+<h2>Пример</h2>	<p>Код для программы «Привет, Java!»</p>
+	<pre class='code'>
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Привет, Java!");
+    }
+}</pre>
+			</div>
+		</div>
+		<footer>Design studio 2017 ©</footer>
+		<script type="text/javascript">
+			var links = document.getElementsByClassName("header_link");
+			var i;
+			for (i = 0; i < links.length; i++)
+			{
+				links[i].i = i;
+				links[i].onmouseenter = function(event)
+				{
+					var j = 0;
+					for (j = 0; j < links.length; j++)
+					{
+						links[j].style.color = "#eee";
+					}
+					this.style.color = "#55aa55";
+
+					var submenus = document.getElementsByClassName("header_submenu");
+					var k;
+					for (k = 0; k < submenus.length; k++)
+					{
+						submenus[k].style.display = "none";
+					}
+
+					switch (this.i)
+					{
+						case 0:
+							document.getElementById("java_submenu").style.display = "block";
+							break;
+						case 1:
+							document.getElementById("c_submenu").style.display = "block";
+							break;
+						case 2:
+							document.getElementById("pascalabc_submenu").style.display = "block";
+							break;
+						case 3:
+							document.getElementById("fs_submenu").style.display = "block";
+							break;
+					}
+				};
+			}
+
+			document.getElementById("header").onmouseleave = function(event)
+			{
+				var submenus = document.getElementsByClassName("header_submenu");
+				var k;
+				for (k = 0; k < submenus.length; k++)
+				{
+					submenus[k].style.display = "none";
+				}
+				var links = document.getElementsByClassName("header_link");
+				var j = 0;
+				for (j = 0; j < links.length; j++)
+				{
+					links[j].style.color = "#eee";
+				}
+			};
+		</script>
+	</body>
+</html>
